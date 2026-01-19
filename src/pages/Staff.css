@@ -1,0 +1,60 @@
+.staff-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.staff-card {
+    text-align: center;
+}
+
+.staff-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.staff-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.staff-card:hover .staff-image img {
+    transform: scale(1.03);
+}
+
+.staff-content {
+    padding: 24px;
+}
+
+.staff-name {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.staff-specialty {
+    display: inline-block;
+    background-color: var(--color-bg);
+    color: var(--color-secondary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.staff-comment {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}

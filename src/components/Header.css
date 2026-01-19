@@ -1,0 +1,126 @@
+.header {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-primary);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+}
+
+.nav-cta {
+    background-color: var(--color-primary);
+    color: var(--color-white) !important;
+    padding: 10px 24px;
+    border-radius: 4px;
+}
+
+.nav-cta:hover {
+    background-color: var(--color-secondary);
+    box-shadow: var(--shadow-md);
+}
+
+.nav-cta.active::after {
+    display: none;
+}
+
+.mobile-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    display: block;
+}
+
+.mobile-nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    padding: 20px;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mobile-nav-link {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: block;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+    }
+}
