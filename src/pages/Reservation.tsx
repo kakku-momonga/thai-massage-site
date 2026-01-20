@@ -55,9 +55,15 @@ const Reservation: React.FC = () => {
                 <div className="lp-hero-content container">
                     <h1>至福の時間を予約する</h1>
                     <p>Web限定の簡単予約受付中</p>
-                    <a href="#reservation-form" className="btn btn-accent btn-lg">
+                    <button
+                        onClick={() => {
+                            const element = document.getElementById('reservation-form');
+                            element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }}
+                        className="btn btn-accent btn-lg"
+                    >
                         予約入力フォームへ
-                    </a>
+                    </button>
                 </div>
             </div>
 
