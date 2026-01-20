@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Top from './pages/Top';
 import Access from './pages/Access';
 import Pricing from './pages/Pricing';
@@ -13,6 +14,7 @@ const App: React.FC = () => {
     return (
         <div className="app-container">
             <Header />
+            <ScrollToTop />
             <main className="main-content">
                 <Routes>
                     <Route path="/" element={<Top />} />
